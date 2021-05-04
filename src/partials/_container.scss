@@ -29,20 +29,20 @@
     @include applyToAllColumns(flex, 1);
   }
   &.kui-hspacing-small {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
     @include applyToAllColumns(padding-left, 0.25rem);
     @include applyToAllColumns(padding-right, 0.25rem);
   }
   &.kui-hspacing-medium {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
     @include applyToAllColumns(padding-left, 0.5rem);
     @include applyToAllColumns(padding-right, 0.5rem);
   }
   &.kui-hspacing-large {
-    margin-left: -2rem;
-    margin-right: -2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
     @include applyToAllColumns(padding-left, 1rem);
     @include applyToAllColumns(padding-right, 1rem);
   }

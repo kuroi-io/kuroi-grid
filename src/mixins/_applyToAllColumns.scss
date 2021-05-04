@@ -1,20 +1,43 @@
 @mixin applyToAllColumns($property, $value) {
-  >.kui-colspan,
-  >.kui-colspan-1,
-  >.kui-colspan-2,
-  >.kui-colspan-3,
-  >.kui-colspan-4,
-  >.kui-colspan-5,
-  >.kui-colspan-6,
-  >.kui-colspan-7,
-  >.kui-colspan-8,
-  >.kui-colspan-9,
-  >.kui-colspan-10,
-  >.kui-colspan-11,
-  >.kui-colspan-12 {
-    @if $property {
+  @if $property {
+    > .kui-span {
       #{$property}: $value;
     }
-    @content
+    @for $i from 1 through 12 {
+      > .kui-span-#{$i} {
+        #{$property}: $value;
+        @content;
+      }
+      > .kui-xs-span-#{$i} {
+        @media #{$mobile-sm} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+      > .kui-sm-span-#{$i} {
+        @media #{$mobile} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+      > .kui-md-span-#{$i} {
+        @media #{$tablet} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+      > .kui-lg-span-#{$i} {
+        @media #{$desktop-sm} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+      > .kui-xl-span-#{$i} {
+        @media #{$desktop} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+      > .kui-xxl-span-#{$i} {
+        @media #{$desktop-xl} {
+          width: ($i/$colCount) * 100%;
+        }
+      }
+    }
   }
 }
