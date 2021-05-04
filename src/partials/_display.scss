@@ -1,0 +1,30 @@
+.kui-is-disabled {
+  opacity: 0.5;
+  pointer-events: none
+}
+
+.kui-display-inline {
+  display: inline
+}
+
+.kui-display-inline-block {
+  display: inline-block;
+  width: auto
+}
+
+.kui-display-block {
+  display: block
+}
+
+.kui-display-none {
+  display: none
+}
+
+.kui-full-width {
+  display: block;
+  width: 100%
+}
+
+.kui-full-height {
+  height: 100%
+}

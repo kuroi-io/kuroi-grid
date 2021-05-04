@@ -1,0 +1,87 @@
+@import '../mixins/columns';
+@import '../mixins/applyToAllColumns';
+
+.kui-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &.kui-container-nowrap {
+    flex-wrap: nowrap;
+  }
+  &.kui-horizontal-grow {
+    flex: 2;
+  }
+  >.kui-vertical-grow {
+    align-self: stretch;
+    display: flex;
+    position: relative;
+    >.kui-container {
+      align-items: stretch;
+    }
+  }
+  @include columns();
+  @include applyToAllColumns(float, left) {
+    &.kui-fixedhw {
+      flex: 0 0 auto;
+    }
+  }
+  &.kui-col-equal {
+    @include applyToAllColumns(flex, 1);
+  }
+  &.kui-hspacing-small {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    @include applyToAllColumns(padding-left, 0.25rem);
+    @include applyToAllColumns(padding-right, 0.25rem);
+  }
+  &.kui-hspacing-medium {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    @include applyToAllColumns(padding-left, 0.5rem);
+    @include applyToAllColumns(padding-right, 0.5rem);
+  }
+  &.kui-hspacing-large {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    @include applyToAllColumns(padding-left, 1rem);
+    @include applyToAllColumns(padding-right, 1rem);
+  }
+  &.kui-vspacing-small {
+    @include applyToAllColumns(margin-bottom, 0.25rem) {
+      &:last-child,
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.kui-vspacing-medium {
+    @include applyToAllColumns(margin-bottom, 0.5rem) {
+      &:last-child,
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.kui-vspacing-large {
+    @include applyToAllColumns(margin-bottom, 1rem) {
+      &:last-child,
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.kui-flex-column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    &.ada-vspacing-small,
+    &.ada-vspacing-medium,
+    &.ada-vspacing-large {
+      @include applyToAllColumns(null, null) {
+        &:last-child,
+        &:only-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

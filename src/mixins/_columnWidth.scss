@@ -1,0 +1,11 @@
+@import '../constants/mediaQueries';
+@import './responsiveColumns';
+
+@mixin columnWidth($colCount) {
+  @for $i from 1 through $colCount {
+    > .kui-span-#{$i} {
+      width: ($i/$colCount) * 100%;
+    }
+  }
+  @include responsiveColumns($colCount)
+}

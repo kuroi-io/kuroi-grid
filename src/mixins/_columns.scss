@@ -1,0 +1,11 @@
+@import './columnWidth';
+@import './columnOffset';
+
+@mixin columns() {
+  @for $i from 1 through 12 {
+    &.kui-col-#{$i} {
+      @include columnWidth($i);
+      @include columnOffset($i);
+    }
+  }
+}

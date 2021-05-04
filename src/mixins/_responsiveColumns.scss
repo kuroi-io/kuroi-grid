@@ -1,0 +1,36 @@
+@import '../constants/mediaQueries';
+
+@mixin responsiveColumns($colCount) {
+  @for $i from 1 through $colCount {
+    > .kui-xs-span-#{$i} {
+      @media #{$mobile-sm} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+    > .kui-sm-span-#{$i} {
+      @media #{$mobile} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+    > .kui-md-span-#{$i} {
+      @media #{$tablet} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+    > .kui-lg-span-#{$i} {
+      @media #{$desktop-sm} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+    > .kui-xl-span-#{$i} {
+      @media #{$desktop} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+    > .kui-xxl-span-#{$i} {
+      @media #{$desktop-xl} {
+        width: ($i/$colCount) * 100%;
+      }
+    }
+  }  
+}
