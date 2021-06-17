@@ -1,3 +1,5 @@
+@import './applyProperty';
+
 @mixin applyToAllColumns($property, $value) {
   @if $property {
     > .kui-span {
@@ -5,37 +7,38 @@
     }
     @for $i from 1 through 12 {
       > .kui-span-#{$i} {
-        #{$property}: $value;
-        @content;
+        @include applyPropety($property, $value) {
+          @content;
+        }
       }
       > .kui-xs-span-#{$i} {
-        @media #{$mobile-sm} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
       > .kui-sm-span-#{$i} {
-        @media #{$mobile} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
       > .kui-md-span-#{$i} {
-        @media #{$tablet} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
       > .kui-lg-span-#{$i} {
-        @media #{$desktop-sm} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
       > .kui-xl-span-#{$i} {
-        @media #{$desktop} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
       > .kui-xxl-span-#{$i} {
-        @media #{$desktop-xl} {
-          width: ($i/$colCount) * 100%;
+        @include applyPropety($property, $value) {
+          @content;
         }
       }
     }

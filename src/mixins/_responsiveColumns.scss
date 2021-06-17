@@ -3,32 +3,32 @@
 @mixin responsiveColumns($colCount) {
   @for $i from 1 through $colCount {
     > .kui-xs-span-#{$i} {
-      @media #{$mobile-sm} {
+      @media #{$xs} {
         width: ($i/$colCount) * 100%;
       }
     }
     > .kui-sm-span-#{$i} {
-      @media #{$mobile} {
+      @media #{$sm} {
         width: ($i/$colCount) * 100%;
       }
     }
     > .kui-md-span-#{$i} {
-      @media #{$tablet} {
+      @media #{$md} {
         width: ($i/$colCount) * 100%;
       }
     }
     > .kui-lg-span-#{$i} {
-      @media #{$desktop-sm} {
+      @media #{$lg} {
         width: ($i/$colCount) * 100%;
       }
     }
     > .kui-xl-span-#{$i} {
-      @media #{$desktop} {
+      @media #{$xl} {
         width: ($i/$colCount) * 100%;
       }
     }
     > .kui-xxl-span-#{$i} {
-      @media #{$desktop-xl} {
+      @media #{$xxl} {
         width: ($i/$colCount) * 100%;
       }
     }

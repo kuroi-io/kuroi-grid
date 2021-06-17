@@ -1,0 +1,4 @@
+@mixin applyPropety($property, $value) {
+  #{$property}: $value;
+  @content
+}
