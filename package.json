@@ -1,0 +1,31 @@
+{
+  "name": "@kuroi/grid",
+  "version": "1.0.0",
+  "description": "kuroiLabs SCSS package for responsive grid layouts",
+  "main": "grid.css",
+  "scripts": {
+    "copyPkgJSON": "shx cp package.json lib/package.json",
+    "compileSCSS": "node-sass --output-style=compressed src/grid.scss lib/grid.css",
+    "build": "shx rm -rf lib && npm run compileSCSS && npm run copyPkgJSON"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuroiLabs/grid.git"
+  },
+  "keywords": [
+    "scss",
+    "grid",
+    "responsive",
+    "layout"
+  ],
+  "author": "kuro <kuro@kuroi.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuroiLabs/grid/issues"
+  },
+  "homepage": "https://github.com/kuroiLabs/grid#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "shx": "^0.3.3"
+  }
+}
