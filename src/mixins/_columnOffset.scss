@@ -1,6 +1,6 @@
 @mixin columnOffset($colCount) {
   @for $i from 1 through ($colCount - 1) {
-    >.kui-offset-#{$i} {
+    >.kl-offset-#{$i} {
       margin-left: ($i/$colCount) * 100%;
     }
   }

@@ -2,41 +2,41 @@
 
 @mixin applyToAllColumns($property, $value) {
   @if $property {
-    > .kui-span {
+    > .kl-span {
       #{$property}: $value;
     }
     @for $i from 1 through 12 {
-      > .kui-span-#{$i} {
+      > .kl-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-xs-span-#{$i} {
+      > .kl-xs-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-sm-span-#{$i} {
+      > .kl-sm-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-md-span-#{$i} {
+      > .kl-md-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-lg-span-#{$i} {
+      > .kl-lg-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-xl-span-#{$i} {
+      > .kl-xl-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }
       }
-      > .kui-xxl-span-#{$i} {
+      > .kl-xxl-span-#{$i} {
         @include applyPropety($property, $value) {
           @content;
         }

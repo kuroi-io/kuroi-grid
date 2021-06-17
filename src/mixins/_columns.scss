@@ -3,7 +3,7 @@
 
 @mixin columns() {
   @for $i from 1 through 12 {
-    &.kui-col-#{$i} {
+    &.kl-col-#{$i} {
       @include columnWidth($i);
       @include columnOffset($i);
     }

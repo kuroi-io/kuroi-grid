@@ -2,32 +2,32 @@
 
 @mixin responsiveColumns($colCount) {
   @for $i from 1 through $colCount {
-    > .kui-xs-span-#{$i} {
+    > .kl-xs-span-#{$i} {
       @media #{$xs} {
         width: ($i/$colCount) * 100%;
       }
     }
-    > .kui-sm-span-#{$i} {
+    > .kl-sm-span-#{$i} {
       @media #{$sm} {
         width: ($i/$colCount) * 100%;
       }
     }
-    > .kui-md-span-#{$i} {
+    > .kl-md-span-#{$i} {
       @media #{$md} {
         width: ($i/$colCount) * 100%;
       }
     }
-    > .kui-lg-span-#{$i} {
+    > .kl-lg-span-#{$i} {
       @media #{$lg} {
         width: ($i/$colCount) * 100%;
       }
     }
-    > .kui-xl-span-#{$i} {
+    > .kl-xl-span-#{$i} {
       @media #{$xl} {
         width: ($i/$colCount) * 100%;
       }
     }
-    > .kui-xxl-span-#{$i} {
+    > .kl-xxl-span-#{$i} {
       @media #{$xxl} {
         width: ($i/$colCount) * 100%;
       }
