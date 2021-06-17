@@ -5,8 +5,11 @@
   "main": "grid.css",
   "scripts": {
     "copyPkgJSON": "shx cp package.json lib/package.json",
-    "compileSCSS": "node-sass --output-style=compressed src/grid.scss lib/grid.css",
-    "build": "shx rm -rf lib && npm run compileSCSS && npm run copyPkgJSON"
+    "compileSCSS": "node-sass --output-style=compressed src/grid.scss lib/css/grid.css",
+    "copySCSS": "shx cp -rf src lib/scss",
+    "build": "shx rm -rf lib && npm run compileSCSS && npm run copySCSS && npm run copyPkgJSON",
+    "pack": "npm pack ./lib",
+    "publish": "npm publish ./lib"
   },
   "repository": {
     "type": "git",
