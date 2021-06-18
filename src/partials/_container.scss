@@ -47,14 +47,6 @@
     @include applyToAllColumns(padding-right, 1rem);
   }
   &.kl-vspacing-small {
-    @include applyToAllColumns(margin-bottom, 0.25rem) {
-      &:last-child,
-      &:only-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-  &.kl-vspacing-medium {
     @include applyToAllColumns(margin-bottom, 0.5rem) {
       &:last-child,
       &:only-child {
@@ -62,8 +54,16 @@
       }
     }
   }
-  &.kl-vspacing-large {
+  &.kl-vspacing-medium {
     @include applyToAllColumns(margin-bottom, 1rem) {
+      &:last-child,
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.kl-vspacing-large {
+    @include applyToAllColumns(margin-bottom, 2rem) {
       &:last-child,
       &:only-child {
         margin-bottom: 0;
