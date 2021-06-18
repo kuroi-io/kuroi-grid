@@ -1,6 +1,6 @@
 {
   "name": "@kuroi/grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "kuroiLabs SCSS package for responsive grid layouts",
   "main": "grid.css",
   "scripts": {
@@ -9,7 +9,7 @@
     "copySCSS": "shx cp -rf src lib/scss",
     "build": "shx rm -rf lib && npm run compileSCSS && npm run copySCSS && npm run copyPkgJSON",
     "pack": "npm pack ./lib",
-    "publish": "npm publish ./lib"
+    "publish": "npm publish ./lib --access=public"
   },
   "repository": {
     "type": "git",
